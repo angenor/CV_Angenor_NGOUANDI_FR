@@ -69,7 +69,7 @@
   \definecolor{ThirdColor}{HTML}{F3890B}
   \definecolor{BodyColor}{HTML}{666666}
   \definecolor{EmphasisColor}{HTML}{2E2E2E}
-  \definecolor{BackgroundColor}{HTML}{E2E2E2}
+  \definecolor{BackgroundColor}{HTML}{FFFFFF}
 \fi%
 
 \colorlet{name}{PrimaryColor}
@@ -98,7 +98,7 @@
 
 \begin{document}
     \name{Angenor N'Gouandi}
-    \tagline{DEVELOPPEUR FULL STACK}
+    \tagline{DÉVELOPPEUR FULL STACK}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{angenor}
 
@@ -106,9 +106,9 @@
         \email{angenor99@gmail.com}
         \smallskip
         \phone{+225 05-45-29-28-02}
-        \location{Abidjan, Cote d'Ivoire}
+        \location{Abidjan, Côte d'Ivoire}
         \linkedin{angenor-ngouandi-463708186}
-        \printinfo{\faGlobe}{Portfolio}[https://angenor.firebaseapp.com/]
+        \homepage{angenor.firebaseapp.com}
         %\github{githubUser}
         %\npm{npmUser}
         %\dev{devtoUser}
@@ -127,7 +127,12 @@
     \makecvheader
     %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
     % \AtBeginEnvironment{itemize}{\small}
-    
+
+    \begin{quote}
+    \normalsize Développeur Full Stack avec plus de 5 ans d'expérience, spécialisé en développement mobile (Flutter) et web (Laravel, VueJs). Consultant pour l'Organisation Internationale de la Francophonie, formateur technique reconnu (Orange CI, RMO, ESATIC) et passionné par l'IA appliquée.
+    \end{quote}
+    \vspace{-0.5em}
+
     %% Set the left/right column width ratio to 6:4.
     \columnratio{0.25}
 
@@ -136,70 +141,54 @@
     \begin{paracol}{2}
         % ----- TECH STACK -----
         \cvsection{COMPÉTENCES}
+            \textbf{Mobile} \\
             \cvtag{Flutter}
             \cvtag{Firebase}
-            \cvtag{Laravel}
-            \cvtag{VueJs}
             \cvtag{Supabase}
+            \smallskip
+
+            \textbf{Backend} \\
+            \cvtag{Laravel}
+            \cvtag{FastAPI}
             \cvtag{Python}
+            \smallskip
+
+            \textbf{Frontend} \\
+            \cvtag{VueJs}
             \cvtag{Nuxtjs}
             \cvtag{Tailwind CSS}
-            \cvtag{FastAPI}
+            \smallskip
+
+            \textbf{Autres} \\
             \cvtag{Qt/C++}
-            \medskip
+            \cvtag{Machine Learning}
         % ----- TECH STACK -----
-        
+
+        % ----- POINTS FORTS -----
+        \cvsection{Points forts}
+            \cvachievement{\faTrophy}{Consultant OIF}{5 COP depuis 2021}
+            \cvachievement{\faGraduationCap}{Formateur}{Orange CI, RMO, ESATIC}
+            \cvachievement{\faLaptopCode}{IA appliquée}{Chatbot Gemini, ElevenLabs}
+        % ----- POINTS FORTS -----
+
         % ----- LANGUAGES -----
         \cvsection{Langues}
             \cvlang{Français}{Langue maternelle} \\
-            \cvlang{Anglais}{Moyen} 
-            % \divider
-            
-            
-            %% Yeah I didn't spend too much time making all the
-            %% spacing consistent... sorry. Use \smallskip, \medskip,
-            %% \bigskip, \vpsace etc to make ajustments.
+            \cvlang{Anglais}{Intermédiaire}
         % ----- LANGUAGES -----
 
-       % ----- permis -----
-        \cvsection{permis}
+        % ----- permis -----
+        \cvsection{Permis}
             \cvlang{Catégorie}{B, C, D, E} \\
         % ----- permis -----
-            
-        % ----- REFERENCES -----
-        %\cvsection{References}
-        %    \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-        %    \divider
-        %
-        %    \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
-        % ----- REFERENCES -----
-        
-        % ----- MOST PROUD -----
-        % \cvsection{Most Proud of}
-        
-        % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
-        % \divider
-        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
-        % \divider
-        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-        % ----- MOST PROUD -----
-        
-        % \cvsection{A Day of My Life}
-        
-        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-        % \wheelchart{outer radius}{inner radius}{
-        % comma-separated list of value/text width/color/detail}
-        % \wheelchart{1.5cm}{0.5cm}{%
-        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
-        %   3/8em/accent!40/Hopeful novelist by night,
-        %   8/8em/accent!60/Daytime job,
-        %   2/10em/accent/Sports and relaxation,
-        %   5/6em/accent!20/Spending time with family
-        % }
-        
-        % use ONLY \newpage if you want to force a page break for
-        % ONLY the current column
-        \newpage
+
+        % ----- INTERETS -----
+        \cvsection{Intérêts}
+            \cvtag{Intelligence artificielle}
+            \cvtag{Open source}
+            \cvtag{Environnement}
+            \cvtag{Pédagogie}
+        % ----- INTERETS -----
         
         %% Switch to the right column. This will now automatically move to the second
         %% page if the content is too long.
@@ -208,7 +197,7 @@
         
         
         % ----- EXPERIENCE -----
-        \cvsection{Experiences}
+        \cvsection{Expériences}
 
             % \cvevent{Consultant développeur mobile}{Beyima}{20 Juillet 2022 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
             % \begin{itemize}
@@ -222,37 +211,36 @@
             
             
             
-            \cvevent{Consultant Informatique}{Organisation Internationale de la Francophonie}{Mai 2021 -- Aujourd'hui}{Québec, Canada ( Télétravail )}
+            \cvevent{Consultant Informatique}{Organisation Internationale de la Francophonie}{Mai 2021 -- Aujourd'hui}{Québec, Canada (Télétravail)}
             \begin{itemize}
-                \item Mise en place et maintenance de la plateforme web relative au pavillon de la Francophonie(Epavillon).
-                \item Développement d'un chatbot intelligent intégrant l'API Gemini 2.5 Flash pour fournir une assistance automatisée aux visiteurs et pour assister les négociateurs francophones avant et après les sessions de négociation.
+                \item Mise en place et maintenance de la plateforme web relative au pavillon de la Francophonie (Epavillon).
+                \item Développement d'un chatbot intelligent intégrant l'API Gemini 2.5 Flash pour fournir une assistance automatisée aux visiteurs et assister les négociateurs francophones.
                 \item Implémentation d'une solution de traduction multilingue en temps réel via l'API IA ElevenLabs.
-                \item Mise en place et maintenance de la plateforme web des formations des négociateurs et négociatrices francophones dans le epavillon.
-                \item Mise en place et maintenance de la plateforme web relative au cadre mondiale sur la biodiversité sur le epavillon.
-                \item Mise en place et maintenance de l'application mobile du guide du négociateur francophone. 
-                \item Intégration de l'API de Zoom et YouTube sur le Epavillon pour générer et gérer les sessions en ligne automatiquement et lancer le streaming lors des réunions et conférences automatiquement.
+                \item Mise en place et maintenance de la plateforme web des formations des négociateurs francophones.
+                \item Mise en place et maintenance de la plateforme web relative au cadre mondial sur la biodiversité.
+                \item Développement de l'application mobile du guide du négociateur francophone.
+                \item Intégration de l'API Zoom et YouTube sur le Epavillon pour la gestion automatisée des sessions en ligne et du streaming.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Flutter, Laravel, VueJs, Tailwind CSS, Claude Code, Supabase.
             \end{itemize}
             \divider
 
-            \cvevent{Enseignant vacataire en Informatique}{Ecole Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{13 Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \cvevent{Formateur Python}{RMO Capital Humain}{Août 2025}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
-                \item Chargé de former les étudiants de LICENCE 3 de la filière Développement  d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
+                \item Formation de développeurs expérimentés (10+ ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
+            \end{itemize}
+            \divider
+
+            \cvevent{Enseignant vacataire en Informatique}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item Formation des étudiants de Licence 3 de la filière Développement d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
                 \item Membre du jury des soutenances de Licence 3.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} HTML, CSS, PHP, Javascript
             \end{itemize}
             \divider
-            
-            \cvevent{Formateur Python}{RMO Capital Humain}{Aout 2025}{Abidjan, Côte d'Ivoire}
-            \begin{itemize}
-                \item J'ai été chargé de former des développeurs expérimentés (plus de 10 ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
-            \end{itemize}
-            
-            \divider
-            
+
             \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
-                \item J'ai été chargé de former des porteurs de projets au développement d'applications mobiles avec Flutter pour le compte de l'opérateur téléphonique Orange Côte d'Ivoire.
+                \item Formation de porteurs de projets au développement d'applications mobiles avec Flutter pour Orange Côte d'Ivoire.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Dart, Flutter, Firebase
             \end{itemize}
             
@@ -264,8 +252,8 @@
         % \end{itemize}
         % \divider
 
-        \newpage
-        
+        \divider
+
         \cvevent{Machine Learning}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
             \item Mise en place d'un système de détection de Fake News avec Intelligence Artificielle.
@@ -286,31 +274,26 @@
 
 
 
-        % ----- EXPERIENCE -----
+        % ----- MISSIONS -----
         \cvsection{MISSIONS}
-            \cvevent{30ème Conférence des Parties}{Organisation Internationale de la Francophonie}{09 - 22 novembre 2025}{Belém, Brésil}
+            \cvevent{Conférences des Parties (COP 26 à 30)}{Organisation Internationale de la Francophonie}{2021 -- 2025}{}
+            \begin{itemize}
+                \item Support technique du Pavillon de la Francophonie lors des COP : Glasgow (2021), Charm el-Cheikh (2022), Dubaï (2023), Bakou (2024), Belém (2025).
+            \end{itemize}
             \divider
-            
-            \cvevent{Salon des sciences, technologies et innovations environnementales pour le développement}{Organisation Internationale de la Francophonie}
-            {17 - 20 Février 2025}{Yaoundé, Cameroun}
-            \cvevent{}{}{25 - 28 novembre 2024}{kinshasa, RDC}
-            \divider
-            
-            \cvevent{Conférence des Parties}{Organisation Internationale de la Francophonie}{2024: COP 29}{Bakou, Azerbaïdjan}
-            
-            \cvevent{}{}{2023: COP 28}{Dubaï, Émirats Arabes Unis}
-            
-            \cvevent{}{}{2022: COP 27}{Charm el-Cheikh, Égypte}
-            
-            \cvevent{}{}{2021: COP 26}{Glasgow, Royaume-Uni}
-        % ----- EXPERIENCE -----
+
+            \cvevent{Salon des sciences, technologies et innovations environnementales}{Organisation Internationale de la Francophonie}{2024 -- 2025}{}
+            \begin{itemize}
+                \item Yaoundé, Cameroun (Février 2025) — Kinshasa, RDC (Novembre 2024).
+            \end{itemize}
+        % ----- MISSIONS -----
         
         % ----- EDUCATION -----
         \cvsection{FORMATIONS}
-            \cvevent{Master 2 Système d'Information et Génie Logiciel}{Ecole Supérieure Africaine des TIC(ESATIC)}{2020 -- 2021}{Abidjan, Côte d'Ivoire}
+            \cvevent{Master 2 Système d'Information et Génie Logiciel}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 2021}{Abidjan, Côte d'Ivoire}
             \divider
             
-            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{Ecole Supérieure Africaine des TIC(ESATIC)}{2018 -- 2019}{Abidjan, Côte d'Ivoire}
+            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 2019}{Abidjan, Côte d'Ivoire}
             
         % ----- EDUCATION -----
         
