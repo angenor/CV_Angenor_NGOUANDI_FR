@@ -1,0 +1,318 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.6.5b, 27 Jun 2023) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+%% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
+%% Use the "darkmode" option if you want a color palette used to 
+% \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Fork (before v1.6.5a): Change the color codes to test your personal variant on any mode
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{E2E2E2}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{main.bib}
+
+\begin{document}
+    \name{Angenor N'Gouandi}
+    \tagline{DEVELOPPEUR FULL STACK}
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{angenor}
+
+    \personalinfo{
+        \email{angenor99@gmail.com}
+        \smallskip
+        \phone{+225 05-45-29-28-02}
+        \location{Abidjan, Cote d'Ivoire}
+        \linkedin{angenor-ngouandi-463708186}
+        \printinfo{\faGlobe}{Portfolio}[https://angenor.firebaseapp.com/]
+        %\github{githubUser}
+        %\npm{npmUser}
+        %\dev{devtoUser}
+        %\medium{nicolasomar}
+        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+        % \orcid{0000-0000-0000-0000}
+        %% You can add your own arbtrary detail with
+        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+        %% Or you can declare your own field with
+        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+        % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+        % \gitlab{your_id}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- TECH STACK -----
+        \cvsection{COMPÉTENCES}
+            \cvtag{Flutter}
+            \cvtag{Firebase}
+            \cvtag{Laravel}
+            \cvtag{VueJs}
+            \cvtag{Supabase}
+            \cvtag{Python}
+            \cvtag{Nuxtjs}
+            \cvtag{Tailwind CSS}
+            \cvtag{FastAPI}
+            \cvtag{Qt/C++}
+            \medskip
+        % ----- TECH STACK -----
+        
+        % ----- LANGUAGES -----
+        \cvsection{Langues}
+            \cvlang{Français}{Langue maternelle} \\
+            \cvlang{Anglais}{Moyen} 
+            % \divider
+            
+            
+            %% Yeah I didn't spend too much time making all the
+            %% spacing consistent... sorry. Use \smallskip, \medskip,
+            %% \bigskip, \vpsace etc to make ajustments.
+        % ----- LANGUAGES -----
+
+       % ----- permis -----
+        \cvsection{permis}
+            \cvlang{Catégorie}{B, C, D, E} \\
+        % ----- permis -----
+            
+        % ----- REFERENCES -----
+        %\cvsection{References}
+        %    \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+        %    \divider
+        %
+        %    \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
+        % ----- REFERENCES -----
+        
+        % ----- MOST PROUD -----
+        % \cvsection{Most Proud of}
+        
+        % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+        % ----- MOST PROUD -----
+        
+        % \cvsection{A Day of My Life}
+        
+        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+        % \wheelchart{outer radius}{inner radius}{
+        % comma-separated list of value/text width/color/detail}
+        % \wheelchart{1.5cm}{0.5cm}{%
+        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
+        %   3/8em/accent!40/Hopeful novelist by night,
+        %   8/8em/accent!60/Daytime job,
+        %   2/10em/accent/Sports and relaxation,
+        %   5/6em/accent!20/Spending time with family
+        % }
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        
+        
+        % ----- EXPERIENCE -----
+        \cvsection{Experiences}
+
+            % \cvevent{Consultant développeur mobile}{Beyima}{20 Juillet 2022 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            % \begin{itemize}
+            %     \item Définition de l'architecture technique des applications mobiles.
+            %     \item Prise de décisions sur les technologies et frameworks à utiliser.
+            %     \item Participation active au développement des applications (iOS et/ou Android).
+            %     \item Optimisation des performances et des expériences utilisateurs des applications.
+            %     \item \textcolor{SecondaryColor}{\textbf{Outils: }} Flutter/Dart, Firebase, Laravel API
+            % \end{itemize}
+            % \divider
+            
+            
+            
+            \cvevent{Consultant Informatique}{Organisation Internationale de la Francophonie}{Mai 2021 -- Aujourd'hui}{Québec, Canada ( Télétravail )}
+            \begin{itemize}
+                \item Mise en place et maintenance de la plateforme web relative au pavillon de la Francophonie(Epavillon).
+                \item Développement d'un chatbot intelligent intégrant l'API Gemini 2.5 Flash pour fournir une assistance automatisée aux visiteurs et pour assister les négociateurs francophones avant et après les sessions de négociation.
+                \item Implémentation d'une solution de traduction multilingue en temps réel via l'API IA ElevenLabs.
+                \item Mise en place et maintenance de la plateforme web des formations des négociateurs et négociatrices francophones dans le epavillon.
+                \item Mise en place et maintenance de la plateforme web relative au cadre mondiale sur la biodiversité sur le epavillon.
+                \item Mise en place et maintenance de l'application mobile du guide du négociateur francophone. 
+                \item Intégration de l'API de Zoom et YouTube sur le Epavillon pour générer et gérer les sessions en ligne automatiquement et lancer le streaming lors des réunions et conférences automatiquement.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Flutter, Laravel, VueJs, Tailwind CSS, Claude Code, Supabase.
+            \end{itemize}
+            \divider
+
+            \cvevent{Enseignant vacataire en Informatique}{Ecole Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{13 Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item Chargé de former les étudiants de LICENCE 3 de la filière Développement  d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
+                \item Membre du jury des soutenances de Licence 3.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} HTML, CSS, PHP, Javascript
+            \end{itemize}
+            \divider
+            
+            \cvevent{Formateur Python}{RMO Capital Humain}{Aout 2025}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item J'ai été chargé de former des développeurs expérimentés (plus de 10 ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
+            \end{itemize}
+            
+            \divider
+            
+            \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item J'ai été chargé de former des porteurs de projets au développement d'applications mobiles avec Flutter pour le compte de l'opérateur téléphonique Orange Côte d'Ivoire.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Dart, Flutter, Firebase
+            \end{itemize}
+            
+        % \cvevent{Ingénieur développeur}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Février 2021 -- Août 2021}{Abidjan, Côte d'Ivoire}
+        % \begin{itemize}
+        %     \item Maintenance de la plateforme de dématérialisation du processus de souscription aux produits d'assurances de Côte d'Ivoire (easyassur.net) en partenariat avec AXAassurance, NSIA assurance, Saham assurance et 13 autres.
+        %     \item Développement du module de souscription aux flottes automobiles de la plateforme easyassur.net.
+        %     \item \textcolor{SecondaryColor}{\textbf{Outils: }} Laravel, jQuery, Javascript.
+        % \end{itemize}
+        % \divider
+
+        \newpage
+        
+        \cvevent{Machine Learning}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
+        \begin{itemize}
+            \item Mise en place d'un système de détection de Fake News avec Intelligence Artificielle.
+            \item Création d'une extension Google Chrome pour y intégrer la solution.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Sklearn, Algorithme passif-agressif, NLP(TF-IDF), Python 3.7(Flask, Jupyter), JavaScript, HTML.
+        \end{itemize}
+
+        \divider
+        
+        \cvevent{Développeur}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
+        \begin{itemize}
+            \item Mise en place d'une plateforme d'intégration continue pour les projets sectoriels pour optimiser le rendement des chefs de projet de l'ANSUT (Squash-TM, Mantis Bug Tracker).
+            \item Développement de script python pour automatiser le remplissage de formulaires.
+            \item Participation aux réunions de pilotage de projets.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Microsoft Azure, Tomcat, Python, Selenium IDE, Linux(CentOs).
+        \end{itemize}
+        % ----- EXPERIENCE -----
+
+
+
+        % ----- EXPERIENCE -----
+        \cvsection{MISSIONS}
+            \cvevent{30ème Conférence des Parties}{Organisation Internationale de la Francophonie}{09 - 22 novembre 2025}{Belém, Brésil}
+            \divider
+            
+            \cvevent{Salon des sciences, technologies et innovations environnementales pour le développement}{Organisation Internationale de la Francophonie}
+            {17 - 20 Février 2025}{Yaoundé, Cameroun}
+            \cvevent{}{}{25 - 28 novembre 2024}{kinshasa, RDC}
+            \divider
+            
+            \cvevent{Conférence des Parties}{Organisation Internationale de la Francophonie}{2024: COP 29}{Bakou, Azerbaïdjan}
+            
+            \cvevent{}{}{2023: COP 28}{Dubaï, Émirats Arabes Unis}
+            
+            \cvevent{}{}{2022: COP 27}{Charm el-Cheikh, Égypte}
+            
+            \cvevent{}{}{2021: COP 26}{Glasgow, Royaume-Uni}
+        % ----- EXPERIENCE -----
+        
+        % ----- EDUCATION -----
+        \cvsection{FORMATIONS}
+            \cvevent{Master 2 Système d'Information et Génie Logiciel}{Ecole Supérieure Africaine des TIC(ESATIC)}{2020 -- 2021}{Abidjan, Côte d'Ivoire}
+            \divider
+            
+            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{Ecole Supérieure Africaine des TIC(ESATIC)}{2018 -- 2019}{Abidjan, Côte d'Ivoire}
+            
+        % ----- EDUCATION -----
+        
+    \end{paracol}
+\end{document}
