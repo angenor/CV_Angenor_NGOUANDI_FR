@@ -93,6 +93,12 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
+%% Désactiver la césure automatique des mots en fin de ligne
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1000
+\emergencystretch=3em
+
 %% sample.bib contains your publications
 %% \addbibresource{main.bib}
 
@@ -106,9 +112,11 @@
         \email{angenor99@gmail.com}
         \smallskip
         \phone{+225 05-45-29-28-02}
-        \location{Abidjan, Côte d'Ivoire}
-        \linkedin{angenor-ngouandi-463708186}
-        \homepage{angenor.firebaseapp.com}
+        \printinfo{\faBirthdayCake}{Né le 17/12/1999}
+        \printinfo{\faFlag}{Nationnalité ivoirienne}
+        \printinfo{\faHome}{Domicilié à Abidjan, Côte d'Ivoire}
+        %\\linkedin{angenor-ngouandi-463708186}
+        \printinfo{\faGlobe}{Portfolio}[https://angenor.firebaseapp.com/]
         %\github{githubUser}
         %\npm{npmUser}
         %\dev{devtoUser}
@@ -129,7 +137,7 @@
     % \AtBeginEnvironment{itemize}{\small}
 
     \begin{quote}
-    \normalsize Ingénieur logiciel avec plus de 5 ans d'expérience en conception d'architectures applicatives, développement et maintenance de systèmes d'information. Expérience dans la définition de choix techniques, l'intégration d'API tierces et la mise en place de plateformes de tests et d'intégration continue. Consultant pour l'Organisation Internationale de la Francophonie et formateur technique avec plus de 5 projets en production. Master 2 en Système d'Information et Génie Logiciel.
+    \normalsize Ingénieur logiciel avec plus de 5 ans d'expérience en conception d'architectures applicatives, développement et maintenance de systèmes d'information. Expérience dans la définition de choix techniques, l'intégration d'API tierces et la mise en place de plateformes de tests et d'intégration continue. Expert Informatique pour l'Organisation Internationale de la Francophonie, consultant informatique pour l'Université Senghor et formateur technique avec plus de 5 projets en production. Master 2 en Système d'Information et Génie Logiciel.
     \end{quote}
     \vspace{-0.5em}
 
@@ -171,14 +179,13 @@
             \cvtag{Git}
             \cvtag{Microsoft Azure}
             \cvtag{Linux}
-            \cvtag{Tomcat}
         % ----- TECH STACK -----
 
         % ----- POINTS FORTS -----
         \cvsection{Points forts}
             \cvachievement{}{Multi-projets en production}{5 plateformes}
             \cvachievement{}{Architecture \& maintenance SI}{Conception, déploiement, évolution}
-            \cvachievement{}{Institutions publiques}{OIF, ANSUT, ESATIC}
+            \cvachievement{}{Institutions publiques \& international}{OIF, ANSUT, ESATIC, Université Senghor}
         % ----- POINTS FORTS -----
 
         % ----- LANGUAGES -----
@@ -186,7 +193,7 @@
             \cvlang{Français}{Langue maternelle} \\
             \cvlang{Anglais}{Intermédiaire}
         % ----- LANGUAGES -----
-
+        \newpage
         % ----- permis -----
         \cvsection{Permis}
             \cvlang{Catégorie}{B, C, D, E} \\
@@ -220,18 +227,31 @@
             
             
             
-            \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- Aujourd'hui}{Québec, Canada (Télétravail)}
+            \cvevent{Expert Informatique \textnormal{\textit{(Contrat d'expert)}}}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- Décembre 2027}{Québec, Canada (Télétravail)}
             \begin{itemize}
-                \item Définition de l'architecture technique et des choix technologiques pour 1 plateformes web en production.
-                \item Conception, développement et maintenance corrective et évolutive des applications de l'institution.
-                \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, Gemini, ElevenLabs).
+                \item Définition de l'architecture technique et des choix technologiques pour une plateforme web en production.
+                \item Conception, développement et maintenance corrective et évolutive d'applications de l'institution.
+                \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouteer).
                 \item Vérification de la conformité des applications aux spécifications fonctionnelles et techniques avant chaque mise en production.
                 \item Conseil et accompagnement des équipes métier lors des phases de recette et de suivi des anomalies.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
             \end{itemize}
             \divider
 
-            \cvevent{Enseignant vacataire en Informatique}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \cvevent{Architecte Technique \& Développeur Full Stack \textnormal{\textit{(Contrat de consultation)}}}{Université Senghor — Université internationale de langue française, Opérateur direct de la Francophonie}{Décembre 2025 -- Décembre 2026}{Alexandrie, Égypte (Télétravail)}
+            \begin{itemize}
+                \item Conception de l'architecture technique du nouveau site institutionnel trilingue (FR/EN/AR avec support RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
+                \item Définition des choix technologiques pérennes et évolutifs, documentation des choix techniques et fonctionnels pour garantir l'appropriation durable de l'outil par les équipes internes.
+                \item Mise en place de l'infrastructure de production : Docker Compose (5 conteneurs), Nginx (reverse proxy, SSL/TLS Let's Encrypt, rate limiting), déploiement automatisé via script (Git, sauvegardes BDD, monitoring).
+                \item Implémentation de la sécurité : authentification JWT avec refresh tokens, contrôle d'accès RBAC, journal d'audit, en-têtes HTTP sécurisés.
+                \item Volumétrie livrée : plus de 70 pages, 135 composants Vue, 51 endpoints API, 15 services métier.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, Tailwind CSS 4, FastAPI, Python 3.14, SQLAlchemy 2 (async), Pydantic 2, PostgreSQL 16, Docker, Nginx.
+            \end{itemize}
+            \divider
+
+            \newpage
+
+            \cvevent{Enseignant vacataire en Informatique \textnormal{\textit{(Contrat de vacation)}}}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation des étudiants de Licence 3 de la filière Développement d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
                 \item Membre du jury des soutenances de Licence 3.
@@ -239,25 +259,21 @@
             \end{itemize}
             \divider
 
-            \cvevent{Formateur Python}{RMO Capital Humain}{Août 2025}{Abidjan, Côte d'Ivoire}
+            \cvevent{Formateur Python \textnormal{\textit{(Contrat de consultation via BEYIMA)}}}{RMO Capital Humain}{Août 2025 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation de développeurs expérimentés (10+ ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
             \end{itemize}
             \divider
-
             
-
-            \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023}{Abidjan, Côte d'Ivoire}
+            \cvevent{Formateur Flutter \textnormal{\textit{(Contrat de consultation via BEYIMA)}}}{Orange Côte d'Ivoire}{Avril 2023 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation de porteurs de projets au développement d'applications mobiles avec Flutter pour Orange Côte d'Ivoire.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Dart, Flutter, Firebase
             \end{itemize}
-            
-            \newpage
 
         \divider
 
-        \cvevent{Développeur Machine Learning}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
+        \cvevent{Développeur Machine Learning \textnormal{\textit{(Bénévolat -- encadrement académique)}}}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
             \item Conception et entraînement d'un modèle de classification de texte (NLP) pour la détection automatique de Fake News.
             \item Traitement et préparation des données textuelles (pipeline TF-IDF).
@@ -267,7 +283,7 @@
 
         \divider
         
-        \cvevent{Développeur / Assurance Qualité}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
+        \cvevent{Développeur / Assurance Qualité \textnormal{\textit{(Stage)}}}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
             \item Définition de l'architecture et mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels.
             \item Déploiement et configuration de Squash-TM (gestion des plans et cas de tests) et Mantis Bug Tracker (suivi des anomalies) sur serveur Linux/Tomcat.
@@ -275,15 +291,14 @@
             \item Conseil aux équipes de développement et participation aux réunions de pilotage de projets.
             \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis Bug Tracker, Selenium IDE, Python, Microsoft Azure, Tomcat, Linux (CentOS).
         \end{itemize}
-        % ----- EXPERIENCE -----
 
-
+        \newpage
 
         % ----- PROJETS -----
         \cvsection{Projets notables}
-            \cvevent{Université Senghor}{\cvreference{137.74.117.231}{http://137.74.117.231/}}{Freelance}{Alexandrie, Égypte}
+            \cvevent{Université Senghor}{\cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}}{Freelance}{Alexandrie, Égypte}
             \begin{itemize}
-                \item Refonte complète de la plateforme web de l'Université Senghor de la Francophonie. Projet récemment achevé — le domaine usenghor-francophonie.org sera connecté prochainement (il pointe actuellement vers l'ancienne plateforme).
+                \item Aperçu du site institutionnel trilingue (détails de l'architecture en section Expériences).
             \end{itemize}
             \divider
 
@@ -293,28 +308,26 @@
             \end{itemize}
             \divider
 
-            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{Freelance}{}
-            \begin{itemize}
-                \item Plateforme numérique de publication de magazines téléchargeables avec tableau de bord d'administration et suivi statistique.
-            \end{itemize}
-            \divider
-
             \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{Freelance}{Madagascar}
             \begin{itemize}
-                \item Développement du site web de l'Observatoire des Mines de Madagascar.
+                \item Plateforme de l'Observatoire des Mines de Madagascar.
             \end{itemize}
             \divider
-
-            \newpage
 
             \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{Freelance}{Madagascar}
             \begin{itemize}
                 \item Plateforme numérique de suivi de l'utilisation des revenus miniers des collectivités territoriales.
             \end{itemize}
-        % ----- PROJETS -----
+            \divider
+
+            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{Freelance}{Cote d'Ivoire}
+            \begin{itemize}
+                \item Plateforme numérique du magazine dédié aux étudiants ivoiriens avec tableau de bord d'administration et suivi statistique.
+            \end{itemize}
+
 
         % ----- MISSIONS -----
-        \cvsection{MISSIONS}
+        \cvsection{MISSIONS INTERNATIONAL}
             \cvevent{Conférences des Parties (COP 26 à 30)}{Organisation Internationale de la Francophonie}{2021 -- 2025}{}
             \begin{itemize}
                 \item Support technique du Pavillon de la Francophonie lors des COP : Glasgow, Royaume-Uni (2021) — Charm el-Cheikh, Égypte (2022) — Dubaï, Émirats Arabes Unis (2023) — Bakou, Azerbaïdjan (2024) — Belém, Brésil (2025).
@@ -329,13 +342,13 @@
         
         % ----- EDUCATION -----
         \cvsection{FORMATIONS}
-            \cvevent{Master 2 Système d'Information et Génie Logiciel}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 2021}{Abidjan, Côte d'Ivoire}
-            \divider
-            
-            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 2019}{Abidjan, Côte d'Ivoire}
+            \cvevent{Master 2 Système d'Information et Génie Logiciel \textnormal{\textit{(Mention Bien)}}}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 23/09/2021}{Abidjan, Côte d'Ivoire}
             \divider
 
-            \cvevent{Baccalauréat série C}{Lycée Classique d'Abidjan}{2016}{Abidjan, Côte d'Ivoire}
+            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication \textnormal{\textit{(Mention Bien)}}}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 20/09/2019}{Abidjan, Côte d'Ivoire}
+            \divider
+
+            \cvevent{Baccalauréat série C \textnormal{\textit{(Mention Passable)}}}{Lycée Classique d'Abidjan}{2016 -- 25/07/2016}{Abidjan, Côte d'Ivoire}
 
         % ----- EDUCATION -----
         
