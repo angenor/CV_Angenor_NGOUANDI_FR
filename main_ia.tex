@@ -93,12 +93,18 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
+%% Désactiver la césure automatique des mots en fin de ligne
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1000
+\emergencystretch=3em
+
 %% sample.bib contains your publications
 %% \addbibresource{main.bib}
 
 \begin{document}
     \name{Angenor N'Gouandi}
-    \tagline{DÉVELOPPEUR FULL STACK | IA APPLIQUÉE}
+    \tagline{INGÉNIEUR LOGICIEL | ARCHITECTURE SI \& DÉVELOPPEMENT}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{angenor}
 
@@ -106,9 +112,11 @@
         \email{angenor99@gmail.com}
         \smallskip
         \phone{+225 05-45-29-28-02}
-        \location{Abidjan, Côte d'Ivoire}
-        \linkedin{angenor-ngouandi-463708186}
-        \homepage{angenor.firebaseapp.com}
+        \printinfo{\faBirthdayCake}{Né le 17/12/1999}
+        \printinfo{\faFlag}{Nationalité ivoirienne}
+        \printinfo{\faHome}{Domicilié à Abidjan, Côte d'Ivoire}
+        %\\linkedin{angenor-ngouandi-463708186}
+        \printinfo{\faGlobe}{Portfolio}[https://angenor.firebaseapp.com/]
         %\github{githubUser}
         %\npm{npmUser}
         %\dev{devtoUser}
@@ -129,7 +137,7 @@
     % \AtBeginEnvironment{itemize}{\small}
 
     \begin{quote}
-    \normalsize Développeur Full Stack avec plus de 5 ans d'expérience en développement web et mobile et passionné par l'Intelligence Artificielle appliquée. Expérience concrète en Machine Learning (NLP, classification) et en développement de chatbot IA. Consultant pour l'Organisation Internationale de la Francophonie et formateur technique.
+    \normalsize Ingénieur logiciel avec plus de 5 ans d'expérience en conception d'architectures applicatives, développement et maintenance de systèmes d'information. Expérience dans la définition de choix techniques, l'intégration d'API tierces et la mise en place de plateformes de tests et d'intégration continue. Expert Informatique pour l'Organisation Internationale de la Francophonie, consultant informatique pour l'Université Senghor et formateur technique avec plus de 5 projets en production. Master 2 en Système d'Information et Génie Logiciel.
     \end{quote}
     \vspace{-0.5em}
 
@@ -141,34 +149,44 @@
     \begin{paracol}{2}
         % ----- TECH STACK -----
         \cvsection{COMPÉTENCES}
-            \textbf{IA / Data} \\[0.3em]
-            \cvtag{Python}
-            \cvtag{NLP}
-            \cvtag{LLM}
+            \textbf{Architecture applicative} \\[0.3em]
+            \cvtag{Architecture / SI}
+            \cvtag{API REST}
+            \cvtag{Intégration continue}
             \vspace{0.5em}
 
-            \textbf{Backend} \\[0.3em]
-            \cvtag{FastAPI}
+            \textbf{Développement} \\[0.3em]
+            \cvtag{Python}
             \cvtag{Laravel}
+            \cvtag{VueJs}
+            \cvtag{Flask}
+            \cvtag{Flutter}
+            \vspace{0.5em}
+
+            \textbf{Qualité / Tests} \\[0.3em]
+            \cvtag{Squash-TM}
+            \cvtag{Mantis}
+            \cvtag{Selenium}
+            \vspace{0.5em}
+
+            \textbf{Bases de données} \\[0.3em]
             \cvtag{Supabase}
             \cvtag{Firebase}
+            \cvtag{MySQL}
             \vspace{0.5em}
 
-            \textbf{Frontend} \\[0.3em]
-            \cvtag{VueJs}
-            \cvtag{Nuxtjs}
-            \cvtag{Tailwind CSS}
-            \vspace{-0.5em}
-
-            \textbf{Mobile} \\[0.3em]
-            \cvtag{Flutter}
+            \textbf{Outils / Infra} \\[0.3em]
+            \cvtag{Git}
+            \cvtag{Microsoft Azure}
+            \cvtag{Linux}
         % ----- TECH STACK -----
 
         % ----- POINTS FORTS -----
         \cvsection{Points forts}
-            \cvachievement{}{Chatbot IA}{Gemini API, NLP}
-            \cvachievement{}{Machine Learning}{Classification, NLP}
-            \cvachievement{}{Consultant OIF}{5 COP depuis 2021}
+            \cvachievement{}{Multi-projets en production}{5 plateformes}
+            \cvachievement{}{Architecture \& maintenance SI}{Conception, déploiement, évolution}
+            \cvachievement{}{Institutions publiques \& internationales}{OIF, ANSUT, ESATIC, Université Senghor}
+            \cvachievement{}{Finaliste Hackathon Francophone IA}{ESG Mefali — Top 10/200}
         % ----- POINTS FORTS -----
 
         % ----- LANGUAGES -----
@@ -184,10 +202,9 @@
 
         % ----- INTERETS -----
         \cvsection{Intérêts}
-            \cvtag{Intelligence artificielle}
-            \cvtag{Open source}
-            \cvtag{Environnement}
+            \cvtag{Qualité logicielle}
             \cvtag{Pédagogie}
+            \cvtag{Automatisation}
         % ----- INTERETS -----
         
         %% Switch to the right column. This will now automatically move to the second
@@ -211,108 +228,97 @@
             
             
             
-            \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- Aujourd'hui}{Québec, Canada (Télétravail)}
+            \cvevent{Expert Informatique \textnormal{\textit{(Contrat d'expert)}}}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- Décembre 2027}{Québec, Canada (Télétravail)}
             \begin{itemize}
-                \item Mise en place et maintenance de la plateforme web relative au pavillon de la Francophonie (Epavillon).
-                \item Conception et développement d'un chatbot intelligent intégrant l'API Gemini 2.5 Flash (LLM/Transformer) pour fournir une assistance automatisée aux visiteurs et assister les négociateurs francophones.
-                \item Implémentation d'une solution de traduction multilingue en temps réel via l'API IA ElevenLabs.
-                \item Mise en place et maintenance de la plateforme web des formations des négociateurs francophones.
-                \item Mise en place et maintenance de la plateforme web relative au cadre mondial sur la biodiversité.
-                \item Développement de l'application mobile du guide du négociateur francophone.
-                \item Intégration de l'API Zoom et YouTube sur le Epavillon pour la gestion automatisée des sessions en ligne et du streaming.
-                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Gemini API, ElevenLabs API, Flutter, Laravel, VueJs, Supabase, Claude Code.
+                \item Plateforme en production : \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
+                \item Définition de l'architecture technique et des choix technologiques de la plateforme.
+                \item Conception, développement et maintenance corrective et évolutive d'applications de l'institution.
+                \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouter).
+                \item Vérification de la conformité des applications aux spécifications fonctionnelles et techniques avant chaque mise en production.
+                \item Conseil et accompagnement des équipes métier lors des phases de recette et de suivi des anomalies.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
             \end{itemize}
             \divider
 
-            \cvevent{Enseignant vacataire en Informatique}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \cvevent{Architecte Technique \& Développeur Full Stack \textnormal{\textit{(Contrat de consultation)}}}{Université Senghor — Université internationale de langue française, Opérateur direct de la Francophonie}{Décembre 2025 -- Décembre 2026}{Alexandrie, Égypte (Télétravail)}
+            \begin{itemize}
+                \item Site en production : \cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}.
+                \item Conception de l'architecture technique du site institutionnel trilingue (FR/EN/AR, RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
+                \item Modèle de gouvernance multi-acteurs pour l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (RBAC, périmètres de contribution, journal d'audit).
+                \item Infrastructure de production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, sécurité JWT + refresh tokens, en-têtes HTTP sécurisés.
+                \item Volumétrie livrée : 70+ pages, 135 composants Vue, 51 endpoints API, 15 services métier.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, Tailwind CSS 4, FastAPI, Python 3.14, SQLAlchemy 2 (async), Pydantic 2, PostgreSQL 16, Docker, Nginx.
+            \end{itemize}
+            \divider
+
+            \newpage
+
+            \cvevent{Enseignant vacataire en Informatique \textnormal{\textit{(Contrat de vacation)}}}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation des étudiants de Licence 3 de la filière Développement d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
                 \item Membre du jury des soutenances de Licence 3.
-                \item \textcolor{SecondaryColor}{\textbf{Outils: }} HTML, CSS, PHP, Javascript
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} HTML, CSS, PHP, Javascript, Modélisation UML
             \end{itemize}
             \divider
 
-            \cvevent{Formateur Python}{RMO Capital Humain}{Août 2025}{Abidjan, Côte d'Ivoire}
+            \cvevent{Formateur Python \textnormal{\textit{(Contrat de consultation via BEYIMA)}}}{RMO Capital Humain}{Août 2025 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation de développeurs expérimentés (10+ ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
             \end{itemize}
             \divider
-
-            \newpage
-
-            \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023}{Abidjan, Côte d'Ivoire}
+            
+            \cvevent{Formateur Flutter \textnormal{\textit{(Contrat de consultation via BEYIMA)}}}{Orange Côte d'Ivoire}{Avril 2023 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation de porteurs de projets au développement d'applications mobiles avec Flutter pour Orange Côte d'Ivoire.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Dart, Flutter, Firebase
             \end{itemize}
-            
-        % \cvevent{Ingénieur développeur}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Février 2021 -- Août 2021}{Abidjan, Côte d'Ivoire}
-        % \begin{itemize}
-        %     \item Maintenance de la plateforme de dématérialisation du processus de souscription aux produits d'assurances de Côte d'Ivoire (easyassur.net) en partenariat avec AXAassurance, NSIA assurance, Saham assurance et 13 autres.
-        %     \item Développement du module de souscription aux flottes automobiles de la plateforme easyassur.net.
-        %     \item \textcolor{SecondaryColor}{\textbf{Outils: }} Laravel, jQuery, Javascript.
-        % \end{itemize}
-        % \divider
 
         \divider
 
-        \cvevent{Développeur Machine Learning}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
+        \cvevent{Développeur Machine Learning \textnormal{\textit{(Bénévolat -- encadrement académique)}}}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
-            \item Conception et entraînement d'un modèle de classification de texte (NLP) pour la détection automatique de Fake News.
-            \item Traitement et préparation des données textuelles (pipeline TF-IDF).
-            \item Déploiement de la solution via une API Flask et intégration dans une extension Google Chrome.
-            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Scikit-learn, NLP (TF-IDF), Flask, Jupyter Notebook.
+            \item Modèle NLP de détection de Fake News (pipeline TF-IDF), déployé via API Flask et intégré dans une extension Google Chrome.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Scikit-learn, NLP (TF-IDF), Flask.
         \end{itemize}
 
         \divider
         
-        \cvevent{Développeur}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
+        \cvevent{Développeur / Assurance Qualité \textnormal{\textit{(Stage)}}}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
-            \item Mise en place d'une plateforme d'intégration continue pour les projets sectoriels pour optimiser le rendement des chefs de projet de l'ANSUT (Squash-TM, Mantis Bug Tracker).
-            \item Développement de script python pour automatiser le remplissage de formulaires.
-            \item Participation aux réunions de pilotage de projets.
-            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Microsoft Azure, Tomcat, Python, Selenium IDE, Linux(CentOs).
+            \item Mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels (Squash-TM, Mantis Bug Tracker sur Linux/Tomcat).
+            \item Automatisation de tests via Python et Selenium IDE ; conseil aux équipes de développement.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis, Selenium IDE, Python, Azure, Tomcat, Linux.
         \end{itemize}
-        % ----- EXPERIENCE -----
-
-
 
         % ----- PROJETS -----
         \cvsection{Projets notables}
-            \cvevent{Université Senghor}{\cvreference{137.74.117.231}{http://137.74.117.231/}}{Freelance}{Alexandrie, Égypte}
+            \cvevent{ESG Mefali — Conseiller ESG IA \textnormal{\textit{(Finaliste Hackathon Francophone IA)}}}{IFDD, Fondation Green Open Lab \& Gouvernement du Québec}{Mars 2026}{}
             \begin{itemize}
-                \item Refonte complète de la plateforme web de l'Université Senghor de la Francophonie. Projet récemment achevé — le domaine usenghor-francophonie.org sera connecté prochainement (il pointe actuellement vers l'ancienne plateforme).
+                \item Plateforme conversationnelle IA pour la finance durable des PME africaines francophones : diagnostic ESG, matching financement vert (GCF, FEM, BOAD, BAD), scoring de crédit alternatif, calcul d'empreinte carbone, extension Chrome de pré-remplissage de candidatures.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, FastAPI, Python, Claude API via OpenRouter, LangGraph/LangChain, PostgreSQL + pgvector.
             \end{itemize}
             \divider
 
-            \cvevent{Epavillon Climatique}{\cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/}}{OIF}{Québec, Canada}
+            \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{Novembre 2025}{}
             \begin{itemize}
-                \item Plateforme de gestion des activités soumises pour le Pavillon de la Francophonie lors des COP.
+                \item Plateforme de l'Observatoire des Mines de Madagascar.
             \end{itemize}
             \divider
 
-            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{Freelance}{}
+            \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{Novembre 2025}{}
             \begin{itemize}
-                \item Plateforme numérique de publication de magazines téléchargeables avec tableau de bord d'administration et suivi statistique.
+                \item Plateforme numérique de suivi de l'utilisation des revenus miniers des collectivités territoriales de Madagascar.
             \end{itemize}
             \divider
 
-            \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{Freelance}{Madagascar}
+            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{Mars 2026}{}
             \begin{itemize}
-                \item Développement du site web de l'Observatoire des Mines de Madagascar.
+                \item Plateforme numérique du premier magazine dédié aux étudiants ivoiriens.
             \end{itemize}
-            \divider
 
-            \newpage
-
-            \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{Freelance}{Madagascar}
-            \begin{itemize}
-                \item Plateforme numérique de suivi de l'utilisation des revenus miniers des collectivités territoriales.
-            \end{itemize}
-        % ----- PROJETS -----
 
         % ----- MISSIONS -----
-        \cvsection{MISSIONS}
+        \cvsection{MISSIONS INTERNATIONALES}
             \cvevent{Conférences des Parties (COP 26 à 30)}{Organisation Internationale de la Francophonie}{2021 -- 2025}{}
             \begin{itemize}
                 \item Support technique du Pavillon de la Francophonie lors des COP : Glasgow, Royaume-Uni (2021) — Charm el-Cheikh, Égypte (2022) — Dubaï, Émirats Arabes Unis (2023) — Bakou, Azerbaïdjan (2024) — Belém, Brésil (2025).
@@ -321,19 +327,19 @@
 
             \cvevent{Salon des sciences, technologies et innovations environnementales}{Organisation Internationale de la Francophonie}{2024 -- 2025}{}
             \begin{itemize}
-                \item Yaoundé, Cameroun (Février 2025) — Kinshasa, RDC (Novembre 2024).
+                \item Support technique: Yaoundé, Cameroun (Février 2025) — Kinshasa, RDC (Novembre 2024).
             \end{itemize}
         % ----- MISSIONS -----
         
         % ----- EDUCATION -----
         \cvsection{FORMATIONS}
-            \cvevent{Master 2 Système d'Information et Génie Logiciel}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 2021}{Abidjan, Côte d'Ivoire}
-            \divider
-            
-            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 2019}{Abidjan, Côte d'Ivoire}
+            \cvevent{Master 2 Système d'Information et Génie Logiciel \textnormal{\textit{(Mention Bien)}}}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 23/09/2021}{Abidjan, Côte d'Ivoire}
             \divider
 
-            \cvevent{Baccalauréat série C}{Lycée Classique d'Abidjan}{2016}{Abidjan, Côte d'Ivoire}
+            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication \textnormal{\textit{(Mention Bien)}}}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 20/09/2019}{Abidjan, Côte d'Ivoire}
+            \divider
+
+            \cvevent{Baccalauréat série C \textnormal{\textit{(Mention Passable)}}}{Lycée Classique d'Abidjan}{2016 -- 25/07/2016}{Abidjan, Côte d'Ivoire}
 
         % ----- EDUCATION -----
         
