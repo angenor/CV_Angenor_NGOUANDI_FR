@@ -186,6 +186,7 @@
             \cvachievement{}{Multi-projets en production}{5 plateformes}
             \cvachievement{}{Architecture \& maintenance SI}{Conception, déploiement, évolution}
             \cvachievement{}{Institutions publiques \& internationales}{OIF, ANSUT, ESATIC, Université Senghor}
+            \cvachievement{}{Finaliste Hackathon Francophone IA}{ESG Mefali — Top 10/200, IFDD \& Gouv. du Québec, 2026}
         % ----- POINTS FORTS -----
 
         % ----- LANGUAGES -----
@@ -193,7 +194,7 @@
             \cvlang{Français}{Langue maternelle} \\
             \cvlang{Anglais}{Intermédiaire}
         % ----- LANGUAGES -----
-        \newpage
+
         % ----- permis -----
         \cvsection{Permis}
             \cvlang{Catégorie}{B, C, D, E} \\
@@ -240,17 +241,13 @@
 
             \cvevent{Architecte Technique \& Développeur Full Stack \textnormal{\textit{(Contrat de consultation)}}}{Université Senghor — Université internationale de langue française, Opérateur direct de la Francophonie}{Décembre 2025 -- Décembre 2026}{Alexandrie, Égypte (Télétravail)}
             \begin{itemize}
-                \item Conception de l'architecture technique du nouveau site institutionnel trilingue (FR/EN/AR avec support RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
-                \item Conception d'un modèle de gouvernance multi-acteurs permettant l'administration décentralisée de la plateforme par les équipes des \textbf{14 pays} où l'université est représentée (RBAC, périmètres de contribution, journal d'audit).
-                \item Définition des choix technologiques pérennes et évolutifs, documentation des choix techniques et fonctionnels pour garantir l'appropriation durable de l'outil par les équipes internes.
-                \item Mise en place de l'infrastructure de production : Docker Compose (5 conteneurs), Nginx (reverse proxy, SSL/TLS Let's Encrypt, rate limiting), déploiement automatisé via script (Git, sauvegardes BDD, monitoring).
-                \item Implémentation de la sécurité : authentification JWT avec refresh tokens, contrôle d'accès RBAC, journal d'audit, en-têtes HTTP sécurisés.
-                \item Volumétrie livrée : plus de 70 pages, 135 composants Vue, 51 endpoints API, 15 services métier.
+                \item Conception de l'architecture technique d'un site institutionnel trilingue (FR/EN/AR, RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
+                \item Modèle de gouvernance multi-acteurs pour l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (RBAC, périmètres de contribution, journal d'audit).
+                \item Infrastructure de production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, sécurité JWT + refresh tokens, en-têtes HTTP sécurisés.
+                \item Volumétrie livrée : 70+ pages, 135 composants Vue, 51 endpoints API, 15 services métier.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, Tailwind CSS 4, FastAPI, Python 3.14, SQLAlchemy 2 (async), Pydantic 2, PostgreSQL 16, Docker, Nginx.
             \end{itemize}
             \divider
-
-            \newpage
 
             \cvevent{Enseignant vacataire en Informatique \textnormal{\textit{(Contrat de vacation)}}}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
@@ -276,52 +273,47 @@
 
         \cvevent{Développeur Machine Learning \textnormal{\textit{(Bénévolat -- encadrement académique)}}}{Société Ivoirienne d'Intelligence Numérique (SIIN)}{Juin 2020 -- Août 2020}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
-            \item Conception et entraînement d'un modèle de classification de texte (NLP) pour la détection automatique de Fake News.
-            \item Traitement et préparation des données textuelles (pipeline TF-IDF).
-            \item Déploiement de la solution via une API Flask et développement/intégration dans une extension Google Chrome.
-            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Scikit-learn, NLP (TF-IDF), Flask, Jupyter Notebook.
+            \item Modèle NLP de détection de Fake News (pipeline TF-IDF), déployé via API Flask et intégré dans une extension Google Chrome.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Scikit-learn, NLP (TF-IDF), Flask.
         \end{itemize}
 
         \divider
         
         \cvevent{Développeur / Assurance Qualité \textnormal{\textit{(Stage)}}}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
-            \item Définition de l'architecture et mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels.
-            \item Déploiement et configuration de Squash-TM (gestion des plans et cas de tests) et Mantis Bug Tracker (suivi des anomalies) sur serveur Linux/Tomcat.
-            \item Automatisation de tests et de tâches via Python et Selenium IDE.
-            \item Conseil aux équipes de développement et participation aux réunions de pilotage de projets.
-            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis Bug Tracker, Selenium IDE, Python, Microsoft Azure, Tomcat, Linux (CentOS).
+            \item Mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels (Squash-TM, Mantis Bug Tracker sur Linux/Tomcat).
+            \item Automatisation de tests via Python et Selenium IDE ; conseil aux équipes de développement.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis, Selenium IDE, Python, Azure, Tomcat, Linux.
         \end{itemize}
-
-        \newpage
 
         % ----- PROJETS -----
         \cvsection{Projets notables}
-            \cvevent{Université Senghor}{\cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}}{}{}
+            \cvevent{ESG Mefali — Conseiller ESG IA \textnormal{\textit{(Finaliste Hackathon Francophone IA)}}}{IFDD, Fondation Green Open Lab \& Gouvernement du Québec}{2026}{}
             \begin{itemize}
-                \item Site institutionnel trilingue de l'Université Senghor.
+                \item Plateforme conversationnelle IA pour la finance durable des PME africaines francophones : diagnostic ESG, matching financement vert (GCF, FEM, BOAD, BAD), scoring de crédit alternatif, calcul d'empreinte carbone, extension Chrome de pré-remplissage de candidatures.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, FastAPI, Python, Claude API via OpenRouter, LangGraph/LangChain, PostgreSQL + pgvector.
             \end{itemize}
             \divider
 
-            \cvevent{Epavillon Climatique}{\cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/}}{}{}
+            \cvevent{Epavillon Climatique}{\cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/}}{2021}{}
             \begin{itemize}
                 \item Plateforme de gestion des activités soumises pour le Pavillon de la Francophonie lors des COP pour les 53 États membres.
             \end{itemize}
             \divider
 
-            \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{}{}
+            \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{2026}{}
             \begin{itemize}
                 \item Plateforme de l'Observatoire des Mines de Madagascar.
             \end{itemize}
             \divider
 
-            \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{}{}
+            \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{2026}{}
             \begin{itemize}
                 \item Plateforme numérique de suivi de l'utilisation des revenus miniers des collectivités territoriales de Madagascar.
             \end{itemize}
             \divider
 
-            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{}{}
+            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{2026}{}
             \begin{itemize}
                 \item Plateforme numérique du premier magazine dédié aux étudiants ivoiriens.
             \end{itemize}
