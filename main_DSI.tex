@@ -12,6 +12,8 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
+%% Variante du CV adaptée au poste de Directeur des Systèmes d'Information (DSI)
+
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
@@ -25,7 +27,7 @@
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
 %% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
-%% Use the "darkmode" option if you want a color palette used to 
+%% Use the "darkmode" option if you want a color palette used to
 % \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
 
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
@@ -104,7 +106,7 @@
 
 \begin{document}
     \name{Angenor N'Gouandi}
-    \tagline{INNOVATION \& INTELLIGENCE ARTIFICIELLE | RENFORCEMENT DES CAPACITÉS NUMÉRIQUES}
+    \tagline{SYSTÈMES D'INFORMATION | ARCHITECTURE, GOUVERNANCE SI \& TRANSFORMATION DIGITALE}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{angenor}
 
@@ -131,13 +133,13 @@
         % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
         % \gitlab{your_id}
     }
-    
+
     \makecvheader
     %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
     % \AtBeginEnvironment{itemize}{\small}
 
     \begin{quote}
-    \normalsize Ingénieur logiciel (Master 2 en Système d'Information et Génie Logiciel) avec plus de 5 ans d'expérience, spécialisé en innovation technologique, intelligence artificielle et renforcement des capacités numériques. Concepteur de solutions d'IA (plateforme conversationnelle, agents LLM, RAG) et finaliste du Hackathon Francophone IA. Expert Informatique pour l'Organisation Internationale de la Francophonie et consultant pour l'Université Senghor, avec une solide expérience auprès d'institutions publiques et internationales. Formateur technique (ESATIC, Orange, RMO) engagé dans le transfert de compétences et la montée en compétences des équipes.
+    \normalsize Ingénieur en systèmes d'information (Master 2 en Système d'Information et Génie Logiciel) avec plus de 5 ans d'expérience en conception et pilotage d'architectures SI, sécurisation des données et conduite de projets de transformation digitale. Expert Informatique pour l'Organisation Internationale de la Francophonie et architecte technique pour l'Université Senghor, où j'ai urbanisé un système d'information institutionnel (\textasciitilde65 tables, gouvernance RBAC, sécurité JWT/SSL, infrastructure Docker/Nginx). Expérience confirmée auprès d'institutions publiques et internationales, doublée d'une activité de formateur (ESATIC, Orange, RMO) orientée vers le renforcement des capacités et l'accompagnement des utilisateurs.
     \end{quote}
     \vspace{-0.5em}
 
@@ -149,26 +151,41 @@
     \begin{paracol}{2}
         % ----- TECH STACK -----
         \cvsection{COMPÉTENCES}
-            \textbf{Intelligence Artificielle} \\[0.3em]
-            \cvtag{Agents LLM}
-            \cvtag{Claude API}
-            \cvtag{LangGraph}
-            \cvtag{LangChain}
-            \cvtag{RAG / pgvector}
-            \cvtag{OpenRouter}
-            \vspace{0.5em}
-
-            \textbf{Architecture applicative} \\[0.3em]
+            \textbf{Architecture \& Systèmes d'Information} \\[0.3em]
             \cvtag{Architecture / SI}
+            \cvtag{Urbanisation SI}
             \cvtag{API REST}
             \cvtag{Intégration continue}
+            \vspace{0.5em}
+
+            \textbf{Sécurité \& Gouvernance SI} \\[0.3em]
+            \cvtag{JWT}
+            \cvtag{SSL/TLS}
+            \cvtag{RBAC}
+            \cvtag{Journal d'audit}
+            \cvtag{Rate limiting}
+            \vspace{0.5em}
+
+            \textbf{Bases de données} \\[0.3em]
+            \cvtag{PostgreSQL}
+            \cvtag{MySQL}
+            \cvtag{Supabase}
+            \cvtag{Firebase}
+            \vspace{0.5em}
+
+            \textbf{Infrastructure / Outils} \\[0.3em]
+            \cvtag{Docker}
+            \cvtag{Nginx}
+            \cvtag{Linux}
+            \cvtag{Microsoft Azure}
+            \cvtag{Git}
             \vspace{0.5em}
 
             \textbf{Développement} \\[0.3em]
             \cvtag{Python}
             \cvtag{Laravel}
-            \cvtag{VueJs}
-            \cvtag{Flask}
+            \cvtag{Vue / Nuxt}
+            \cvtag{FastAPI}
             \cvtag{Flutter}
             \vspace{0.5em}
 
@@ -178,24 +195,17 @@
             \cvtag{Selenium}
             \vspace{0.5em}
 
-            \textbf{Bases de données} \\[0.3em]
-            \cvtag{Supabase}
-            \cvtag{Firebase}
-            \cvtag{MySQL}
-            \vspace{0.5em}
-
-            \textbf{Outils / Infra} \\[0.3em]
-            \cvtag{Git}
-            \cvtag{Microsoft Azure}
-            \cvtag{Linux}
+            \textbf{Intelligence Artificielle} \\[0.3em]
+            \cvtag{Agents LLM}
+            \cvtag{RAG / pgvector}
         % ----- TECH STACK -----
 
         % ----- POINTS FORTS -----
         \cvsection{Points forts}
-            \cvachievement{}{Multi-projets en production}{5 plateformes}
-            \cvachievement{}{Architecture \& maintenance SI}{Conception, déploiement, évolution}
+            \cvachievement{}{Architecture \& urbanisation SI}{\textasciitilde65 tables, 12 services, gouvernance RBAC}
+            \cvachievement{}{Sécurité \& infrastructure de production}{JWT, SSL/TLS, Docker, Nginx}
             \cvachievement{}{Institutions publiques \& internationales}{OIF, ANSUT, ESATIC, Université Senghor}
-            \cvachievement{}{Finaliste du Hackathon Francophone IA}{ESG Mefali — Top 10/200, IFDD \& Gouv. du Québec, 2026}
+            \cvachievement{}{Multi-projets en production}{5+ plateformes}
         % ----- POINTS FORTS -----
 
         % ----- LANGUAGES -----
@@ -211,54 +221,41 @@
 
         % ----- INTERETS -----
         \cvsection{Intérêts}
-            \cvtag{Innovation technologique}
-            \cvtag{Renforcement des capacités}
+            \cvtag{Gouvernance SI}
+            \cvtag{Cybersécurité}
+            \cvtag{Transformation digitale}
             \cvtag{Pédagogie}
-            \cvtag{Automatisation}
         % ----- INTERETS -----
-        
+
         %% Switch to the right column. This will now automatically move to the second
         %% page if the content is too long.
         \switchcolumn
-        
-        
-        
+
+
+
         % ----- EXPERIENCE -----
         \cvsection{Expériences}
-
-            % \cvevent{Consultant développeur mobile}{Beyima}{20 Juillet 2022 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
-            % \begin{itemize}
-            %     \item Définition de l'architecture technique des applications mobiles.
-            %     \item Prise de décisions sur les technologies et frameworks à utiliser.
-            %     \item Participation active au développement des applications (iOS et/ou Android).
-            %     \item Optimisation des performances et des expériences utilisateurs des applications.
-            %     \item \textcolor{SecondaryColor}{\textbf{Outils: }} Flutter/Dart, Firebase, Laravel API
-            % \end{itemize}
-            % \divider
-            
-            
-            
-            \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- En cours(Fini en Déc. 2027)}{Québec, Canada (Télétravail)}
-            \begin{itemize}
-                \item Plateforme en production : Epavillon Climatique — \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
-                \item Définition de l'architecture technique et des choix technologiques de la plateforme.
-                \item Conception, développement et maintenance corrective et évolutive d'applications de l'institution.
-                \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouter).
-                \item Conception d'un agent IA (via OpenRouter) pour simplifier et automatiser la création des sessions de visioconférence sur la plateforme Epavillon Climatique.
-                \item Vérification de la conformité des applications aux spécifications fonctionnelles et techniques avant chaque mise en production.
-                \item Conseil et accompagnement des équipes métier lors des phases de recette et de suivi des anomalies.
-                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
-            \end{itemize}
-            \divider
 
             \cvevent{Architecte Technique \& Développeur Full Stack}{Université Senghor — Université internationale de langue française, Opérateur direct de la Francophonie}{Décembre 2025 -- Décembre 2026}{Alexandrie, Égypte (Télétravail)}
             \begin{itemize}
                 \item Site en production : \cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}.
-                \item Conception de l'architecture technique d'un site institutionnel trilingue (FR/EN/AR, RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
+                \item Conception de l'architecture technique et urbanisation d'un système d'information institutionnel trilingue (FR/EN/AR, RTL) : monorepo Nuxt 4 (SSR) + FastAPI, 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
                 \item Modèle de gouvernance multi-acteurs pour l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (RBAC, périmètres de contribution, journal d'audit).
-                \item Infrastructure de production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, sécurité JWT + refresh tokens, en-têtes HTTP sécurisés.
+                \item Sécurisation et infrastructure de production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, authentification JWT + refresh tokens, en-têtes HTTP sécurisés.
                 \item Volumétrie livrée : 70+ pages, 135 composants Vue, 51 endpoints API, 15 services métier.
-                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, Tailwind CSS 4, FastAPI, Python 3.14, SQLAlchemy 2 (async), Pydantic 2, PostgreSQL 16, Docker, Nginx.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, FastAPI, Python, SQLAlchemy 2 (async), PostgreSQL 16, Docker, Nginx.
+            \end{itemize}
+            \divider
+
+            \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- En cours(Fini en Déc. 2027)}{Québec, Canada (Télétravail)}
+            \begin{itemize}
+                \item Plateforme en production : Epavillon Climatique — \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
+                \item Définition de l'architecture technique et des choix technologiques de la plateforme.
+                \item Conception, développement et maintenance corrective et évolutive des systèmes d'information de l'institution.
+                \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouter).
+                \item Vérification de la conformité des applications aux spécifications fonctionnelles et techniques avant chaque mise en production.
+                \item Conseil et accompagnement des équipes métier lors des phases de recette et de suivi des anomalies.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
             \end{itemize}
             \divider
 
@@ -277,7 +274,7 @@
                 \item Formation de développeurs expérimentés (10+ ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
             \end{itemize}
             \divider
-            
+
             \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
             \begin{itemize}
                 \item Formation de porteurs de projets au développement d'applications mobiles avec Flutter pour Orange Côte d'Ivoire.
@@ -336,7 +333,7 @@
                 \item Support technique: Yaoundé, Cameroun (Février 2025) — Kinshasa, RDC (Novembre 2024).
             \end{itemize}
         % ----- MISSIONS -----
-        
+
         % ----- EDUCATION -----
         \cvsection{FORMATIONS}
             \cvevent{Master 2 Système d'Information et Génie Logiciel}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 23/09/2021}{Abidjan, Côte d'Ivoire}
@@ -348,6 +345,6 @@
             \cvevent{Baccalauréat série C}{Lycée Classique d'Abidjan}{2016 -- 25/07/2016}{Abidjan, Côte d'Ivoire}
 
         % ----- EDUCATION -----
-        
+
     \end{paracol}
 \end{document}
