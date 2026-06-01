@@ -1,0 +1,340 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.6.5b, 27 Jun 2023) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Variante du CV adaptée au poste de Directeur de la Transformation Digitale de l'Administration (DTDA)
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+%% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
+%% Use the "darkmode" option if you want a color palette used to
+% \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Fork (before v1.6.5a): Change the color codes to test your personal variant on any mode
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{FFFFFF}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Désactiver la césure automatique des mots en fin de ligne
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1000
+\emergencystretch=3em
+
+%% sample.bib contains your publications
+%% \addbibresource{main.bib}
+
+\begin{document}
+    \name{Angenor N'Gouandi}
+    \tagline{TRANSFORMATION DIGITALE | PILOTAGE DE PROJETS NUMÉRIQUES \& CONDUITE DU CHANGEMENT}
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{angenor}
+
+    \personalinfo{
+        \email{angenor99@gmail.com}
+        \smallskip
+        \phone{+225 05-45-29-28-02}
+        \printinfo{\faBirthdayCake}{Né le 17/12/1999}
+        \printinfo{\faFlag}{Nationalité ivoirienne}
+        \printinfo{\faHome}{Domicilié à Abidjan, Côte d'Ivoire}
+        %\\linkedin{angenor-ngouandi-463708186}
+        \printinfo{\faGlobe}{Portfolio}[https://angenor.firebaseapp.com/]
+        %\github{githubUser}
+        %\npm{npmUser}
+        %\dev{devtoUser}
+        %\medium{nicolasomar}
+        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+        % \orcid{0000-0000-0000-0000}
+        %% You can add your own arbtrary detail with
+        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+        %% Or you can declare your own field with
+        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+        % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+        % \gitlab{your_id}
+    }
+
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+
+    \begin{quote}
+    \normalsize Ingénieur logiciel (Master 2 en Système d'Information et Génie Logiciel) avec plus de 5 ans d'expérience dans la conception, le pilotage et le déploiement de projets de transformation digitale. Architecte technique pour l'Université Senghor et Expert Informatique pour l'Organisation Internationale de la Francophonie, j'y conçois des plateformes numériques facilitant la coopération entre entités et accompagne les équipes métier dans l'adoption des outils. Habitué à la coordination multi-acteurs (gouvernance décentralisée sur 14 pays) et au renforcement des capacités (formateur ESATIC, Orange, RMO), j'inscris mon action dans une logique de modernisation et de service public.
+    \end{quote}
+    \vspace{-0.5em}
+
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- TECH STACK -----
+        \cvsection{COMPÉTENCES}
+            \textbf{Transformation digitale} \\[0.3em]
+            \cvtag{Digitalisation des services}
+            \cvtag{Pilotage de projets}
+            \cvtag{Conduite du changement}
+            \cvtag{Dématérialisation}
+            \vspace{0.5em}
+
+            \textbf{Architecture \& Plateformes numériques} \\[0.3em]
+            \cvtag{Architecture / SI}
+            \cvtag{Plateformes numériques}
+            \cvtag{API REST}
+            \cvtag{Intégration continue}
+            \vspace{0.5em}
+
+            \textbf{Gouvernance \& Coordination} \\[0.3em]
+            \cvtag{Gouvernance multi-acteurs}
+            \cvtag{RBAC}
+            \cvtag{Journal d'audit}
+            \vspace{0.5em}
+
+            \textbf{Bases de données / Infra} \\[0.3em]
+            \cvtag{PostgreSQL}
+            \cvtag{Docker}
+            \cvtag{Nginx}
+            \cvtag{Linux}
+            \vspace{0.5em}
+
+            \textbf{Développement} \\[0.3em]
+            \cvtag{Python}
+            \cvtag{Vue / Nuxt}
+            \cvtag{FastAPI}
+            \cvtag{Laravel}
+            \cvtag{Flutter}
+            \vspace{0.5em}
+
+            \textbf{Innovation \& IA} \\[0.3em]
+            \cvtag{Agents LLM}
+            \cvtag{RAG / pgvector}
+        % ----- TECH STACK -----
+
+        % ----- POINTS FORTS -----
+        \cvsection{Points forts}
+            \cvachievement{}{Projets de transformation digitale}{Plateformes institutionnelles en production}
+            \cvachievement{}{Gouvernance \& coordination multi-acteurs}{14 pays, RBAC, journal d'audit}
+            \cvachievement{}{Accompagnement du changement \& formation}{ESATIC, Orange, RMO}
+            \cvachievement{}{Institutions publiques \& internationales}{OIF, ANSUT, ESATIC, Université Senghor}
+        % ----- POINTS FORTS -----
+
+        % ----- LANGUAGES -----
+        \cvsection{Langues}
+            \cvlang{Français}{Langue maternelle} \\
+            \cvlang{Anglais}{Intermédiaire}
+        % ----- LANGUAGES -----
+
+        % ----- permis -----
+        \cvsection{Permis}
+            \cvlang{Catégorie}{B, C, D, E} \\
+        % ----- permis -----
+
+        % ----- INTERETS -----
+        \cvsection{Intérêts}
+            \cvtag{Transformation digitale}
+            \cvtag{Innovation}
+            \cvtag{Conduite du changement}
+            \cvtag{Pédagogie}
+        % ----- INTERETS -----
+
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+
+
+
+        % ----- EXPERIENCE -----
+        \cvsection{Expériences}
+
+            \cvevent{Architecte Technique \& Développeur Full Stack}{Université Senghor — Université internationale de langue française, Opérateur direct de la Francophonie}{Décembre 2025 -- Décembre 2026}{Alexandrie, Égypte (Télétravail)}
+            \begin{itemize}
+                \item Site en production : \cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}.
+                \item Pilotage de la transformation digitale d'un site institutionnel trilingue (FR/EN/AR, RTL) : conception de l'architecture, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
+                \item Plateforme facilitant la coopération et l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (gouvernance RBAC, périmètres de contribution, journal d'audit).
+                \item Accompagnement du changement et déploiement : mise en production automatisée (Docker, Nginx, SSL/TLS), accompagnement des équipes dans l'adoption de l'outil.
+                \item Volumétrie livrée : 70+ pages, 135 composants Vue, 51 endpoints API, 15 services métier.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, FastAPI, Python, PostgreSQL 16, Docker, Nginx.
+            \end{itemize}
+            \divider
+
+            \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- En cours(Fini en Déc. 2027)}{Québec, Canada (Télétravail)}
+            \begin{itemize}
+                \item Plateforme en production : Epavillon Climatique — \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
+                \item Conception, déploiement et évolution de plateformes numériques au service des États membres et des partenaires de l'institution.
+                \item Analyse des impacts des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouter).
+                \item Suivi de la conformité des applications avant chaque mise en production.
+                \item Conseil et accompagnement des équipes métier lors des phases de recette, de suivi des anomalies et d'adoption des outils.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
+            \end{itemize}
+            \divider
+
+            \newpage
+
+            \cvevent{Enseignant vacataire en Informatique}{École Supérieure Africaine des TIC (ESATIC), Ministère de l'enseignement supérieur et de la recherche scientifique}{Octobre 2023 -- Aujourd'hui}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item Formation des étudiants de Licence 3 de la filière Développement d'Applications et Systèmes d'Information (DASI) en {\textbf{Programmation Web et Multimédia}}.
+                \item Membre du jury des soutenances de Licence 3.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} HTML, CSS, PHP, Javascript, Modélisation UML
+            \end{itemize}
+            \divider
+
+            \cvevent{Formateur Python}{RMO Capital Humain}{Août 2025 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item Formation de développeurs expérimentés (10+ ans d'expérience) en programmation Python chez RMO, entreprise de ressources humaines comptant plus de 30 000 employés.
+            \end{itemize}
+            \divider
+
+            \cvevent{Formateur Flutter}{Orange Côte d'Ivoire}{Avril 2023 \textnormal{(5 jours)}}{Abidjan, Côte d'Ivoire}
+            \begin{itemize}
+                \item Formation de porteurs de projets au développement d'applications mobiles avec Flutter pour Orange Côte d'Ivoire.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Dart, Flutter, Firebase
+            \end{itemize}
+
+        \divider
+
+        \cvevent{Développeur / Assurance Qualité}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
+        \begin{itemize}
+            \item Mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels (Squash-TM, Mantis Bug Tracker sur Linux/Tomcat).
+            \item Automatisation de tests via Python et Selenium IDE ; conseil aux équipes de développement.
+            \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis, Selenium IDE, Python, Azure, Tomcat, Linux.
+        \end{itemize}
+
+        % ----- PROJETS -----
+        \cvsection{Projets notables}
+            \cvevent{ESG Mefali — Conseiller ESG IA \textnormal{\textit{(Finaliste Hackathon Francophone IA)}}}{IFDD, Fondation Green Open Lab \& Gouvernement du Québec}{Mars 2026 -- En cours}{}
+            \begin{itemize}
+                \item Annonce officielle des 10 finalistes : \cvreference{linkedin.com/posts/fondation-green-openlab}{https://www.linkedin.com/posts/fondation-green-openlab_ia-francophonie-daezveloppementdurable-activity-7444395359969193984-NSg3}.
+                \item Plateforme conversationnelle IA pour la finance durable des PME africaines francophones : diagnostic ESG, matching financement vert (GCF, FEM, BOAD, BAD), scoring de crédit alternatif, calcul d'empreinte carbone, extension Chrome de pré-remplissage de candidatures.
+                \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, FastAPI, Python, Claude API via OpenRouter, LangGraph/LangChain, PostgreSQL + pgvector.
+            \end{itemize}
+            \divider
+
+            \cvevent{Observatoire des Mines de Madagascar}{\cvreference{miningobs.mg}{https://miningobs.mg/}}{Novembre 2025}{}
+            \begin{itemize}
+                \item Plateforme de l'Observatoire des Mines de Madagascar.
+            \end{itemize}
+            \divider
+
+            \newpage
+
+            \cvevent{Suivi des revenus miniers}{\cvreference{kaominina-mangarahara.mg}{https://kaominina-mangarahara.mg/}}{Novembre 2025}{}
+            \begin{itemize}
+                \item Plateforme numérique de suivi de l'utilisation des revenus miniers des collectivités territoriales de Madagascar.
+            \end{itemize}
+            \divider
+
+            \cvevent{Le Carré des Études}{\cvreference{lecarredesetudes.com}{https://lecarredesetudes.com/}}{Mars 2026}{}
+            \begin{itemize}
+                \item Plateforme numérique du premier magazine dédié aux étudiants ivoiriens.
+            \end{itemize}
+
+
+        % ----- MISSIONS -----
+        \cvsection{MISSIONS INTERNATIONALES}
+            \cvevent{Conférences des Parties (COP 26 à 30)}{Organisation Internationale de la Francophonie}{2021 -- 2025}{}
+            \begin{itemize}
+                \item Support technique du Pavillon de la Francophonie lors des COP : Glasgow, Royaume-Uni (2021) — Charm el-Cheikh, Égypte (2022) — Dubaï, Émirats arabes unis (2023) — Bakou, Azerbaïdjan (2024) — Belém, Brésil (2025).
+            \end{itemize}
+            \divider
+
+            \cvevent{Salon des sciences, technologies et innovations environnementales}{Organisation Internationale de la Francophonie}{2024 -- 2025}{}
+            \begin{itemize}
+                \item Support technique: Yaoundé, Cameroun (Février 2025) — Kinshasa, RDC (Novembre 2024).
+            \end{itemize}
+        % ----- MISSIONS -----
+
+        % ----- EDUCATION -----
+        \cvsection{FORMATIONS}
+            \cvevent{Master 2 Système d'Information et Génie Logiciel}{École Supérieure Africaine des TIC (ESATIC)}{2020 -- 23/09/2021}{Abidjan, Côte d'Ivoire}
+            \divider
+
+            \cvevent{Licence en Système Réseaux Informatiques et Télécommunication}{École Supérieure Africaine des TIC (ESATIC)}{2018 -- 20/09/2019}{Abidjan, Côte d'Ivoire}
+            \divider
+
+            \cvevent{Baccalauréat série C}{Lycée Classique d'Abidjan}{2016 -- 25/07/2016}{Abidjan, Côte d'Ivoire}
+
+        % ----- EDUCATION -----
+
+    \end{paracol}
+\end{document}
