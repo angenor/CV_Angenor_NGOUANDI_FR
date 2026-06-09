@@ -104,7 +104,7 @@
 
 \begin{document}
     \name{Angenor N'Gouandi}
-    \tagline{INGÉNIEUR LOGICIEL | ARCHITECTURE SI \& DÉVELOPPEMENT}
+    \tagline{CHEF DE PROJET IT | PILOTAGE DE PROJETS \& GOUVERNANCE SI}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{angenor}
 
@@ -137,7 +137,7 @@
     % \AtBeginEnvironment{itemize}{\small}
 
     \begin{quote}
-    \normalsize Ingénieur logiciel avec plus de 5 ans d'expérience en conception d'architectures applicatives, développement et maintenance de systèmes d'information. Expérience dans la définition de choix techniques, l'intégration d'API tierces et la mise en place de plateformes de tests et d'intégration continue. Expert Informatique pour l'Organisation Internationale de la Francophonie, consultant informatique pour l'Université Senghor et formateur technique avec plus de 5 projets en production. Master 2 en Système d'Information et Génie Logiciel.
+    \normalsize Chef de projet IT et ingénieur logiciel avec plus de 5 ans d'expérience dans le pilotage de projets de systèmes d'information : cadrage des besoins, planification, coordination des équipes et des parties prenantes, suivi de la recette et mise en production. Pratique des approches Agile/Scrum et du cycle en V (classique) ainsi que des référentiels de gouvernance et de gestion des services IT (COBIT, ITIL). Expert Informatique pour l'Organisation Internationale de la Francophonie, architecte technique pour l'Université Senghor et formateur technique, avec plus de 5 plateformes en production auprès d'institutions publiques et internationales. Master 2 en Système d'Information et Génie Logiciel.
     \end{quote}
     \vspace{-0.5em}
 
@@ -149,6 +149,21 @@
     \begin{paracol}{2}
         % ----- TECH STACK -----
         \cvsection{COMPÉTENCES}
+            \textbf{Méthodologies \& Gouvernance} \\[0.3em]
+            \cvtag{Agile / Scrum}
+            \cvtag{Cycle en V}
+            \cvtag{Cycle classique}
+            \cvtag{ITIL}
+            \cvtag{COBIT}
+            \vspace{0.5em}
+
+            \textbf{Gestion de projet} \\[0.3em]
+            \cvtag{Cadrage \& planification}
+            \cvtag{Pilotage \& coordination}
+            \cvtag{Parties prenantes}
+            \cvtag{Recette \& mise en production}
+            \vspace{0.5em}
+
             \textbf{Architecture applicative} \\[0.3em]
             \cvtag{Architecture / SI}
             \cvtag{API REST}
@@ -183,8 +198,8 @@
 
         % ----- POINTS FORTS -----
         \cvsection{Points forts}
-            \cvachievement{}{Multi-projets en production}{5 plateformes}
-            \cvachievement{}{Architecture \& maintenance SI}{Conception, déploiement, évolution}
+            \cvachievement{}{Pilotage multi-projets en production}{5 plateformes}
+            \cvachievement{}{Gouvernance \& cycle de vie SI}{Cadrage, déploiement, recette, évolution}
             \cvachievement{}{Institutions publiques \& internationales}{OIF, ANSUT, ESATIC, Université Senghor}
             \cvachievement{}{Finaliste du Hackathon Francophone IA}{ESG Mefali — Top 10/200, IFDD \& Gouv. du Québec, 2026}
         % ----- POINTS FORTS -----
@@ -204,7 +219,6 @@
         \cvsection{Intérêts}
             \cvtag{Qualité logicielle}
             \cvtag{Pédagogie}
-            \cvtag{Automatisation}
         % ----- INTERETS -----
         
         %% Switch to the right column. This will now automatically move to the second
@@ -230,12 +244,12 @@
             
             \cvevent{Expert Informatique}{Organisation Internationale de la Francophonie - Institut de la Francophonie pour le Développement Durable}{Mai 2021 -- En cours(Fini en Déc. 2027)}{Québec, Canada (Télétravail)}
             \begin{itemize}
-                \item Plateforme en production : Epavillon Climatique — \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
-                \item Définition de l'architecture technique et des choix technologiques de la plateforme.
-                \item Conception, développement et maintenance corrective et évolutive d'applications de l'institution.
+                \item Pilotage de la plateforme Epavillon Climatique — \cvreference{epavillonclimatique.francophonie.org}{https://epavillonclimatique.francophonie.org/} (gestion des activités du Pavillon de la Francophonie lors des COP pour les 53 États membres).
+                \item Cadrage des besoins, définition de l'architecture technique et des choix technologiques de la plateforme.
+                \item Conduite des phases de conception, développement et maintenance corrective et évolutive en approche itérative (Agile).
                 \item Analyse des impacts techniques des nouvelles solutions et intégration d'API tierces (Zoom, YouTube, OpenRouter).
-                \item Vérification de la conformité des applications aux spécifications fonctionnelles et techniques avant chaque mise en production.
-                \item Conseil et accompagnement des équipes métier lors des phases de recette et de suivi des anomalies.
+                \item Contrôle de conformité aux spécifications fonctionnelles et techniques avant chaque mise en production (gestion des changements, démarche ITIL).
+                \item Pilotage de la recette et du suivi des anomalies avec les équipes métier ; conseil et accompagnement des parties prenantes.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Python, Laravel, VueJs, Supabase, Flutter, API REST.
             \end{itemize}
             \divider
@@ -244,8 +258,8 @@
             \begin{itemize}
                 \item Site en production : \cvreference{usenghor-francophonie.org}{https://usenghor-francophonie.org/}.
                 \item Conception de l'architecture technique d'un site institutionnel trilingue (FR/EN/AR, RTL) : monorepo Nuxt 4 (SSR) + FastAPI, urbanisation en 12 services fonctionnels (\textasciitilde65 tables PostgreSQL).
-                \item Modèle de gouvernance multi-acteurs pour l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (RBAC, périmètres de contribution, journal d'audit).
-                \item Infrastructure de production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, sécurité JWT + refresh tokens, en-têtes HTTP sécurisés.
+                \item Définition et pilotage d'un modèle de gouvernance SI multi-acteurs pour l'administration décentralisée par les équipes des \textbf{14 pays} de représentation (RBAC, périmètres de contribution, journal d'audit).
+                \item Coordination de la mise en production : Docker Compose, Nginx (reverse proxy, SSL/TLS, rate limiting), déploiement automatisé, sécurité JWT + refresh tokens, en-têtes HTTP sécurisés.
                 \item Volumétrie livrée : 70+ pages, 135 composants Vue, 51 endpoints API, 15 services métier.
                 \item \textcolor{SecondaryColor}{\textbf{Outils: }} Nuxt 4, Vue 3, Tailwind CSS 4, FastAPI, Python 3.14, SQLAlchemy 2 (async), Pydantic 2, PostgreSQL 16, Docker, Nginx.
             \end{itemize}
@@ -277,8 +291,9 @@
 
         \cvevent{Développeur / Assurance Qualité}{Agence Nationale Du Service Universel Des Télécommunications (ANSUT)}{Avril 2019 -- Août 2019}{Abidjan, Côte d'Ivoire}
         \begin{itemize}
-            \item Mise en place d'une plateforme d'intégration continue et de gestion des tests pour les projets sectoriels (Squash-TM, Mantis Bug Tracker sur Linux/Tomcat).
-            \item Automatisation de tests via Python et Selenium IDE ; conseil aux équipes de développement.
+            \item Étude comparative de solutions open source de gestion des tests et de suivi des anomalies, puis choix, déploiement et configuration sur Microsoft Azure (Linux/Tomcat) de Squash-TM et Mantis Bug Tracker, pour outiller les chefs de projet de l'ANSUT : centralisation du suivi des projets sectoriels en remplacement des fichiers Excel.
+            \item Outils destinés aux chefs de projet, interface entre la maîtrise d'ouvrage (MOA) et la maîtrise d'œuvre (MOE).
+            \item Automatisation de tests via Python et Selenium IDE.
             \item \textcolor{SecondaryColor}{\textbf{Outils: }} Squash-TM, Mantis, Selenium IDE, Python, Azure, Tomcat, Linux.
         \end{itemize}
 
